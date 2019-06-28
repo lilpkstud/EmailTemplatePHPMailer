@@ -1,23 +1,5 @@
 <?php
-    if(isset($_POST['emailSubmission'])){
-        var_dump($_POST);
-        //header('Location: mail.php');
-        //exit();
-        //var_dump($_POST);
-        /*$url = 'mail.php';
-        $data = array($_POST);
-        $options = array(
-            'http' => array(
-                'header' => "Conten-type: application/x-www-form-urlencoded\r\n",
-                'method' => 'POST',
-                'content' => http_build_query($data),
-            ),
-        );
-
-        $context = stream_context_create($options);
-        $html = file_get_contents($url, false, $context);*/
-        
-    }
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,20 +15,22 @@
 <body>
     <div class="container">
         <h1>Send To:</h1>
-        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="post">
+        <form action="/mail.php" method="post">
             <h3>Send To:</h3>
             <input type="text" name="firstName" placeholder="First Name">
             <input type="text" name="lastName" placeholder="Last Name">
-            <input type="text" name="sendEmailTo" placeholder="Send Email To">
+            <input type="email" name="sendEmailTo" placeholder="Send Email To" required>
+            <input type="text" name="subjectLine" placeholder="Subject Line">
 
             <h3>Send As:</h3>
             <input type="text" name="senderFirstName" placeholder="Sender First Name">
             <input type="text" name="senderLastName" placeholder="Sender Last Name">
-            <input type="text" name="senderEmail" placeholder="Sent Email As">
+            <input type="email" name="senderEmail" placeholder="Sent Email As" required>
             <input type="submit" name="emailSubmission" value="Draft Email">
         </form>
         <a href="content.html">HTML Email</a>
         <a href="mail.php">Send Mail</a>
+        <a href="userList.php">See All Users</a>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
