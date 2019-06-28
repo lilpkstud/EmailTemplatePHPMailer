@@ -1,5 +1,6 @@
 <?php
 var_dump($_POST);
+die();
 /**
  * Importing PHPMailer classes into the global namespace
  * These must be at the top of your script, not inside a function
@@ -44,6 +45,7 @@ $mail->Password =  $_ENV['smtpPassword'];
 
 if(isset($_POST)){
     var_dump($_POST);
+    
     /* -------------------------------------
         Sender Settings
     ------------------------------------- */
