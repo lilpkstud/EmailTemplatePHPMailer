@@ -1,0 +1,11 @@
+.brand-logo{
+    margin: 0 25%;
+}
+.brand-logo img{
+    max-width:100%;
+}
+.title{
+    margin-top: 5%;
+    text-align: center;
+    border: 4px solid black;
+}

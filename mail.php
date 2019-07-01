@@ -1,6 +1,6 @@
 <?php
-var_dump($_POST);
-die();
+//var_dump($_POST);
+//die();
 /**
  * Importing PHPMailer classes into the global namespace
  * These must be at the top of your script, not inside a function
@@ -102,7 +102,7 @@ if(isset($_POST)){
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML(file_get_contents('content.html'), __DIR__);
+$mail->msgHTML(file_get_contents('content-inlined.html'), __DIR__);
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
 
@@ -110,14 +110,13 @@ $mail->AltBody = 'This is a plain-text message body';
 //$mail->addAttachment('images/phpmailer_mini.png');
 
 //Send the message, check for errors
-echo '<pre>';
+/*echo '<pre>';
 var_dump($mail);
-die();
+die();*/
 
-/*
+
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
     echo "Message sent!";
 }
-*/
