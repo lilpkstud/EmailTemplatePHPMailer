@@ -1,5 +1,14 @@
 <?php
-   
+   $pathway = getAll();
+   /**
+    * 
+    * Create a function to grab the specific pathway from the img/campaign folder
+    * 
+    */
+   function getAll(){
+        $allFiles = array_diff(scandir("views/inlined"), array('..', '.', '.DS_Store'));
+        return $allFiles;
+   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +25,15 @@
     <div class="container">
         <h1>Send To:</h1>
         <form action="/mail.php" method="post">
+            <a href="/views/inlined">View Inlined Email Templates</a>
+            <a href="/views/samples">View Sample Emails</a>
+            <h3>Select a Template: </h3>
+            <select name="template" id="template">
+                <?php foreach($pathway as $template){ ?>
+                    <option value="<?=$template?>"><?=$template?></option>
+                <?php } ?>
+            </select>
+            
             <h3>Send To:</h3>
             <input type="text" name="firstName" placeholder="First Name">
             <input type="text" name="lastName" placeholder="Last Name">
@@ -31,7 +49,6 @@
         <a href="content.html">HTML Email</a>
         <a href="mail.php">Send Mail</a>
         <a href="userList.php">See All Users</a>
-        <a href="/views">Email Template</a>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

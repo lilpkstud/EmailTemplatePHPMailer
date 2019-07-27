@@ -1,0 +1,82 @@
+body{
+    background-color: goldenrod;
+}
+#content{
+    padding: 0px;
+}
+img{
+    text-align: center;
+    color: #0D6F45;
+}
+a {
+    color: #0D6F45;
+}
+#button{
+    border: .5px solid black;
+    padding: 10px 15%;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+}
+/* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+
+/*
+    Extra small devices (portrait phones)
+*/
+@media (max-width: 576px){
+    body{
+        background-color: purple
+    }
+    #logo{
+       margin: 20px 0px;
+    }
+    #content{
+       margin: 20px 0px;
+    }
+    #amazonPrime{
+        margin: 20px 0px;
+    }
+   
+}
+/*
+    Small devices (landscape phones, 567px and up)
+*/
+@media(min-width: 576px) and (max-width: 767.98px){
+    body{
+        background-color: red;
+    }
+    #logo{
+        margin: 10px 0px;
+    }
+    
+}
+/*
+    Medium devices (tablets, 768px)
+*/
+@media(min-width:768px) and (max-width:991.98px){
+    body{
+        background-color: green;
+    }
+    #logo{
+        margin: 10px 0px;
+    }
+     #content{
+        margin-top: 20px;
+    }
+}
+/*
+    Large Devices (Desktops) and up
+*/
+@media(min-width: 992px) and (max-width: 1200px){
+    body{
+        background-color: red;
+    }
+    #logo{
+        margin: 10px 0px;
+    }
+     #content{
+        margin-top: 20px;
+    }
+}

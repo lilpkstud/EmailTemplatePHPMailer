@@ -44,7 +44,7 @@ $mail->Username =  $_ENV['smtpUsername'];
 $mail->Password =  $_ENV['smtpPassword'];
 
 if(isset($_POST)){
-    var_dump($_POST);
+    //var_dump($_POST);
     
     /* -------------------------------------
         Sender Settings
@@ -74,11 +74,11 @@ if(isset($_POST)){
 
     //Setting who the message is to be sent to
     if(!empty($_POST['firstName']) && !empty($_POST['sendEmailTo'])){
-        echo "First If Statement";
+        //echo "First If Statement";
         $mail->addAddress($_POST['sendEmailTo'], $_POST['firstName']);
     }
     if(!empty($_POST['firstName']) && !empty($_POST['lastName'] && !empty($_POST['sendEmailTo']))){
-        echo "2nd If Statement";
+        //echo "2nd If Statement";
         $mail->addAddress($_POST['sendEmailTo'], $_POST['firstName'].' '.$_POST['lastName']);
     }
     if(!empty($_POST['sendEmailTo'])){
@@ -102,7 +102,8 @@ if(isset($_POST)){
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML(file_get_contents('content-inlined.html'), __DIR__);
+$pathway = 'views/inlined/'.$_POST['template'];
+$mail->msgHTML(file_get_contents($pathway), __DIR__);
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
 
@@ -110,8 +111,9 @@ $mail->AltBody = 'This is a plain-text message body';
 //$mail->addAttachment('images/phpmailer_mini.png');
 
 //Send the message, check for errors
-/*echo '<pre>';
-var_dump($mail);
+//echo '<pre>';
+//var_dump($mail);
+/*
 die();*/
 
 
