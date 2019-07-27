@@ -1,8 +1,15 @@
 body{
-    background-color: slategray;
+    /*background-color: slategray;*/
+}
+.navbar{
+    background-color: white;
+}
+
+#patagonia-img{
+    max-width: 100% !important;
 }
 #patagonia-img{
-    max-width: 50% !important;
+    max-width: 90% !important;
     text-align: center;
 }
 hr {
@@ -23,15 +30,16 @@ hr {
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
-@media only screen and (max-width: 620px) {
-    body{
-        background-color: paleturquoise;
-    }
+
+/*
+    Extra small devices (portrait phones)
+*/
+@media (max-width: 576px) {
     #pick-up{
         display: none;
     }
-    .navbar{
-        background-color: white;
+    #nordstrom-logo{
+        max-width: 40%;
     }
     .navbar-brand{
         max-width: 80%;
@@ -42,17 +50,13 @@ hr {
         text-align: right;
         padding-right: 10px;
     }
-    #nordstrom-logo{
-        max-width: 40%;
-    }
     #patagonia{
         padding-top: 10px;
         text-align:center;
     }
     #patagonia-img{
-        max-width: 100% !important;
+        max-width: 90% !important;
     }
-    
     #download{
         margin: 15px 0px;
     }
@@ -68,7 +72,54 @@ hr {
         max-width:40%;
     }
 }
-
+/*
+    Small devices (landscape phones, 567px and up)
+*/
+@media(min-width: 576px) and (max-width: 767.98px){
+    .navbar-brand{
+        max-width: 80%;
+    }
+    .mr-auto{
+        float: right;
+        background-color: whitesmoke;
+        text-align: right;
+        padding-right: 10px;
+    }
+    #nordstrom-logo{
+        max-width: 40%;
+    }
+    #pick-up{
+        display: none;
+    }
+    #patagonia-img{
+        max-width:90% !important
+    }
+}
+/*
+    Medium devices (tablets, 768ox)
+*/
+@media(min-width:768px) and (max-width:991.98px){
+    .navbar-brand{
+        max-width: 100%;
+    }
+    #nordstrom-logo{
+        max-width: 100%;
+    }
+    #pick-up{
+        display: none;
+    }
+}
+/*
+    Large devices (Desktops) and up
+*/
+@media(min-width: 992px){
+    .navbar-brand{
+        max-width: 60%;
+    }
+    #nordstrom-logo{
+        max-width: 60%;
+    }
+}
 
 /* -------------------------------------
     PRESERVE THESE STYLES IN THE HEAD
