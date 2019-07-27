@@ -23,4 +23,5 @@
 <ol>
   <li>Users that send to hotmail account will automatically be sent to their junk mail</li>
   <li>Brands using Font Awesome is not shown when email is being sent....Pretty sure it's because I deleted the CDN from the header.</li>
+  <li>Inline Files such as Wholefoods and Nordstrom's margin/alignment is out of place....Bootstrap container isnt functioning properly?</li>
 </ol>
