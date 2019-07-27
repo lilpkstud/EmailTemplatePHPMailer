@@ -1,4 +1,4 @@
-# EmailTemplatePHPMailer
+# Pigeon Post
 <p>Allowing users to send an email to others while setting the receiver/replyTo email</p>
 <p> Allowing users to create an html template to create the email's body </p>
 
